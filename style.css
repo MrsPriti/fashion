@@ -1,0 +1,359 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Main Navbar Styles */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+.navbar ul li {
+    position: relative; /* Needed for positioning the submenu */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    display: inline-block;
+    position: relative; /* To position the underline */
+}
+
+/* Hover Effects */
+.navbar ul li a:hover {
+    color: #ff3f6c; /* Change text color on hover */
+}
+
+/* Submenu Styles */
+.navbar ul li .submenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position it below the main menu */
+    left: 0;
+    background-color: white;
+    padding: 10px 0; /* Adjust top/bottom padding */
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    white-space: nowrap; /* Prevents wrapping of submenu items */
+}
+
+/* Display submenu items horizontally */
+.navbar ul li .submenu li {
+    display: inline; /* Display items inline for horizontal layout */
+    padding: 0; /* Remove padding to decrease gap */
+    margin-right: 1px; /* Adjust right margin as needed */
+}
+
+.navbar ul li .submenu li a {
+    color: #333;
+    font-size: 13px;
+    padding: 5px 10px; /* You can adjust this for a tighter fit */
+    margin: 0; /* Ensure no extra margin */
+}
+
+.navbar ul li .submenu li a:hover {
+    color: #ff3f6c;
+}
+
+
+/* Display submenu on hover */
+.navbar ul li:hover .submenu {
+    display: block;
+}
+
+/* Underline animation */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: #ff3f6c;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* Hamburger Menu Styles */
+.navbar-toggle {
+    display: none; /* Hidden by default */
+    font-size: 24px; /* Size of hamburger icon */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show hamburger menu on mobile */
+        margin-top: -30px; /* Spacing above the hamburger */
+        align-self: flex-end; /* Align to the right */
+    }
+
+    .navbar {
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width */
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+
+
+    .navbar ul {
+        width: 100%; /* Full width */
+        gap: 10px; /* Adjust gap for mobile */
+    }
+
+    .navbar ul li {
+        width: 100%; /* Make each navbar item full width */
+    }
+
+    .navbar ul li a {
+        padding: 12px; /* Increase padding for touch targets */
+        text-align: center; /* Center text */
+        width: 100%; /* Full width for clickable area */
+    }
+
+    /* Submenu Styles */
+    .navbar ul li .submenu {
+        position: static; /* Make submenu appear in normal flow */
+        box-shadow: none; /* Remove shadow for mobile */
+        padding: 5px 0; /* Reduce padding */
+    }
+
+    .navbar ul li .submenu li {
+        display: block; /* Stack submenu items vertically */
+        width: 100%; /* Make submenu items full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul {
+        gap: 5px; /* Further reduce gap on smaller screens */
+    }
+
+    .navbar ul li a {
+        font-size: 12px; /* Decrease font size */
+    }
+}
+
+.search-bar {
+    position: relative;
+    display: inline-block;
+}
+
+.search-bar input {
+    padding: 12px 12px 12px 40px; /* Add left padding to make room for the search icon */
+    font-size: 14px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    width: 300px;
+    height: 40px;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 10px; /* Position the search icon inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999; /* Icon color */
+    font-size: 16px;
+}
+
+
+.user-options a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.user-options a i {
+    margin-right: 5px;
+}
+
+.user-options a:hover {
+    color: #ff3f6c;
+}
+
+
+/* Banner Section */
+.banner-content {
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.banner-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.category-item {
+    text-align: center;
+    flex-basis: 10%;
+    padding: 10px;
+}
+
+.category-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .search-bar input {
+        width: 250px; /* Adjust input width */
+    }
+
+    .categories {
+        padding: 10px;
+    }
+
+    .category-item {
+        flex-basis: 20%; /* Adjust category item size */
+    }
+
+    .user-options {
+        display: flex; /* Keep user options horizontal */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        justify-content: center; /* Center the options */
+        margin: 0 20px; /* Small left and right margins */
+    }
+}
+
+@media (max-width: 992px) {
+    .search-bar input {
+        width: 200px; /* Further adjust input width */
+    }
+
+    .user-options a {
+        font-size: 12px; /* Smaller font size for user options */
+        margin-left: 10px; /* Adjust margin */
+    }
+
+    .categories {
+        justify-content: space-between; /* Adjust spacing */
+    }
+
+    .category-item {
+        flex-basis: 30%; /* Adjust category item size */
+    }
+
+    .user-options {
+        justify-content: center; /* Center the options */
+        margin: 0 15px; /* Small left and right margins */
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        display: block; /* Make search bar full width */
+        margin-bottom: 20px; /* Add spacing */
+        width: 100%; /* Ensure the search bar takes full width */
+    }
+
+    .search-bar input {
+        width: 100%; /* Full width input */
+        max-width: none; /* Remove max-width to prevent limiting width */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+    }
+
+    .user-options {
+        display: flex; /* Keep user options horizontal */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        justify-content: center; /* Center the options */
+        margin: 0 10px; /* Small left and right margins */
+        padding-left: 70px;
+    }
+
+    .categories {
+        flex-direction: column; /* Stack categories vertically */
+        align-items: center; /* Center items */
+    }
+
+    .category-item {
+        flex-basis: 80%; /* Adjust category item size */
+        margin-bottom: 10px; /* Add spacing */
+    }
+
+    .category-item img {
+        width: 80px; /* Smaller image size */
+        height: 80px; /* Smaller image size */
+    }
+}
+
+@media (max-width: 576px) {
+    .search-bar input {
+        width: 100%; /* Full width input */
+        max-width: none; /* Remove max-width for full width */
+    }
+
+    .user-options {
+        flex-direction: row; /* Keep horizontal layout */
+        justify-content: center; /* Center the options */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        margin: 0 5px; /* Very small left and right margins */
+    }
+
+    .user-options a {
+        margin: 5px; /* Adjust margin for vertical spacing */
+        display: inline-block; /* Ensure links are displayed inline */
+    }
+
+    .category-item {
+        flex-basis: 100%; /* Full width category item */
+    }
+
+    .category-item img {
+        width: 70px; /* Further adjust image size */
+        height: 70px; /* Further adjust image size */
+    }
+}

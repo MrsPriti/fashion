@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nykaa Fashion</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo-full.svg" alt="Nykaa Fashion">
+        </div>
+        <div class="navbar-toggle" id="navbarToggle">
+            &#9776; <!-- Unicode for hamburger icon -->
+        </div>
+        <nav class="navbar" id="navbar"> <!-- Added ID here -->
+            <ul>
+                <li>
+                    <a href="#">Women</a>
+                    <ul class="submenu">
+                        <li><a href="#">What's New</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Indian Wear</a></li>
+                        <li><a href="#">Western Wear</a></li>
+                        <li><a href="#">Footwear</a></li>
+                        <li><a href="#">Lingerie</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Jewellery</a></li>
+                        <li><a href="#">Active & Sports</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Tech Accessories</a></li>
+                        <li><a href="#">Sleep & Lounge</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">All Brands</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for products, styles, brands">
+        </div>
+
+        <div class="user-options">
+            <a href="#"><i class="fas fa-user"></i> Account</a>
+            <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <img src="582e9df4-a4b2-440e-8a72-f782581dfd44.avif" alt="Grand Festive Sale">
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="category-item">
+            <img src="5c0cef31-ab48-4803-89a0-05ae15562f07.avif" alt="Indianwear">
+            <p>Indianwear</p>
+        </div>
+        <div class="category-item">
+            <img src="34f28faa-75fc-442e-9721-43930f678216.avif" alt="Westernwear">
+            <p>Westernwear</p>
+        </div>
+        <div class="category-item">
+            <img src="a7475a45-5381-42d3-b66a-c4f2dc15bac2.avif" alt="Men Store">
+            <p>Men Store</p>
+        </div>
+        <div class="category-item">
+            <img src="8be26621-86fd-4e8f-8912-0d5a19226e57.avif" alt="Footwear">
+            <p>Footwear</p>
+        </div>
+        <div class="category-item">
+            <img src="7ca0c331-bdde-45a6-9969-066a139ac3e1.avif" alt="Lingerie">
+            <p>Lingerie</p>
+        </div>
+        <div class="category-item">
+            <img src="8069e27f-3fcd-4be8-84ad-74acf95a6dd7.avif" alt="Bags">
+            <p>Bags</p>
+        </div>
+        <div class="category-item">
+            <img src="e8804906-3c59-461c-9b98-005d0b9cbedc.avif" alt="Jewellery">
+            <p>Jewellery</p>
+        </div>
+        <div class="category-item">
+            <img src="576e6bbd-c463-4d28-b440-1434e10553b4.avif" alt="Kids">
+            <p>Kids</p>
+        </div>
+        <div class="category-item">
+            <img src="f5c4b1f5-27d6-4d16-b881-de2b8c9ccd6a.avif" alt="Home">
+            <p>Home</p>
+        </div>
+    </section>
+    <script>
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbar = document.getElementById('navbar');
+
+        navbarToggle.addEventListener('click', () => {
+            // Toggle the display of the navbar
+            navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+</html>
