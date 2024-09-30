@@ -158,7 +158,7 @@
 
 @media (max-width: 480px) {
     .navbar ul {
-        gap: 5px; /* Further reduce gap on smaller screens */
+        gap: 0px; /* Further reduce gap on smaller screens */
     }
 
     .navbar ul li a {
